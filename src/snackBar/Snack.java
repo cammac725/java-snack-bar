@@ -4,11 +4,11 @@ public class Snack
 {
   // fields
   private static int maxId = 0;
-  public int id;
-  public String name;
-  public int quantity;
-  public double cost;
-  public int vendingId;
+  private int id;
+  private String name;
+  private int quantity;
+  private double cost;
+  private int vendingId;
 
   // constructor
   public Snack(String name, int quantity, double cost, int vendingId)
@@ -63,19 +63,19 @@ public class Snack
     return quantity;
   }
 
-  public void addQuantity(int x)
+  public void addQuantity(int quantity)
   {
-    this.quantity = (quantity += x);
+    this.quantity += quantity;
   }
   
-  public void buySnack(int y)
+  public void buy(int quantity)
   { 
-    this.quantity = (quantity -= y);
+    this.quantity -= quantity;
   }
 
-  public double getTotalCost(int quantity, double cost)
+  public double getTotalCost(int quantity)
   {
-    return (quantity * cost);
+    return quantity * cost;
   }
 
 }

@@ -30,4 +30,10 @@ public class VendingMachine
   {
     this.name = name;
   }
+
+  public static void buy(Customer customer, Snack snack, int quantity)
+  {
+    customer.buy(snack.getTotalCost(quantity));
+    snack.buy(quantity);
+  }
 }

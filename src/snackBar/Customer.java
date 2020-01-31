@@ -38,14 +38,14 @@ public class Customer
     return cashOnHand;
   }
 
-  public void addCash(double x)
+  public void addCash(double amount)
   {
-    this.cashOnHand = (cashOnHand += x);
+    cashOnHand += amount;
   }
 
-  public void buySnack()
+  public void buy(double cost)
   {
-
+    cashOnHand -= cost;
   }
 
 }
