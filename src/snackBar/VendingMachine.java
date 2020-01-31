@@ -33,7 +33,7 @@ public class VendingMachine
 
   public static void buy(Customer customer, Snack snack, int quantity)
   {
-    customer.buy(snack.getTotalCost(quantity));
+    customer.buy(snack.getTotalCost());
     snack.buy(quantity);
   }
 }

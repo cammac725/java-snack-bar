@@ -12,11 +12,11 @@ public class Main
     VendingMachine drink = new VendingMachine("Drink");
     VendingMachine office = new VendingMachine("Office");
 
-    Snack chips = new Snack("Chips", 36, 1.75, food.getId());
-    Snack chocolateBar = new Snack("Chocolate Bar", 36, 1.00, food.getId());
-    Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId());
-    Snack soda = new Snack("Soda", 24, 2.50, drink.getId());
-    Snack water = new Snack("Water", 20, 2.75, drink.getId());
+    Snack chips = new Snack("Chips", 36, 1.75, food.getId(), food.getName());
+    Snack chocolateBar = new Snack("Chocolate Bar", 36, 1.00, food.getId(), food.getName());
+    Snack pretzel = new Snack("Pretzel", 30, 2.00, food.getId(), food.getName());
+    Snack soda = new Snack("Soda", 24, 2.50, drink.getId(), drink.getName());
+    Snack water = new Snack("Water", 20, 2.75, drink.getId(), drink.getName());
 
     //interactions
     System.out.println("Customer 1 buys 3 of snack 4. Print Customer1 cash on hand. Print quantity of snack 4");
@@ -51,5 +51,11 @@ public class Main
     VendingMachine.buy(bob, pretzel, 3);
     System.out.println("Bob's cash on hand: " + bob.getCashOnHand());
     System.out.println("Quantity of pretzels left in machine: " + pretzel.getQuantity());
+
+    Snack[] snacks = new Snack[]{chips, chocolateBar, pretzel, soda, water};
+    for (int i = 1; i < snacks.length; i++)
+    {
+      System.out.println(snacks[i].toString());
+    }
   }
 }

@@ -9,9 +9,10 @@ public class Snack
   private int quantity;
   private double cost;
   private int vendingId;
+  private String machineName;
 
   // constructor
-  public Snack(String name, int quantity, double cost, int vendingId)
+  public Snack(String name, int quantity, double cost, int vendingId, String machineName)
   {
     maxId++;
     id = maxId;
@@ -19,6 +20,7 @@ public class Snack
     this.quantity = quantity;
     this.cost = cost;
     this.vendingId = vendingId;
+    this.machineName = machineName;
   }
 
   // methods - getters and setters
@@ -73,9 +75,19 @@ public class Snack
     this.quantity -= quantity;
   }
 
-  public double getTotalCost(int quantity)
+  public double getTotalCost()
   {
-    return quantity * cost;
+    return getQuantity() * getCost();
+  }
+
+  @Override
+  public String toString()
+  {
+    String rtnstr = "name: " + name + "\n" +
+                    "vendor name: " + machineName + "\n" +
+                    "quantity: " + quantity  + "\n" +
+                    "total cost: " + getTotalCost();
+    return rtnstr;                
   }
 
 }
