@@ -1,10 +1,15 @@
 package snackBar;
 
+import java.text.DecimalFormat;
+
 public class Main
 {
  
   public static void main(String[] args)
   {
+
+    DecimalFormat df = new DecimalFormat("$###,###,00");
+
     Customer jane = new Customer("Jane", 45.25);
     Customer bob = new Customer("Bob", 33.14);
 

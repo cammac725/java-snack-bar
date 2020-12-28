@@ -83,11 +83,10 @@ public class Snack
   @Override
   public String toString()
   {
-    String rtnstr = "name: " + name + "\n" +
+    return "name: " + name + "\n" +
                     "vendor name: " + machineName + "\n" +
                     "quantity: " + quantity  + "\n" +
                     "total cost: " + getTotalCost();
-    return rtnstr;                
   }
 
 }
